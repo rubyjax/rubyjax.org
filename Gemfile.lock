@@ -91,6 +91,7 @@ GEM
       mime-types (>= 1.16, < 3)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
+    database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     em-hiredis (0.3.0)
@@ -218,6 +219,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.1.0)
   cucumber-rails
+  database_cleaner
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.18)
