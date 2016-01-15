@@ -7,6 +7,9 @@ default: &default
 development:
   <<: *default
   database: rubyjax_org_development
-test:
+test: &test
   <<: *default
   database: rubyjax_org_test
+
+cucumber:
+  <<: *test
