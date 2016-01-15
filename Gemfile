@@ -10,7 +10,7 @@ gem 'puma'
 
 group :development, :test do
   gem 'pry-rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'rspec-rails'
 end
 
