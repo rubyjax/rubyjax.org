@@ -1,24 +1,54 @@
-## README
+# RubyJax
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the official RubyJax website
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+This README assumes you are part of the RubyJax organization as a developer.
+If you're not, please contact an organizer for access.
 
-* System dependencies
+Clone the repo.
 
-* Configuration
+```sh
+git clone http://github.com/rubyjax/rubyjax.org
+#or
+git clone git@github.com:rubyjax/rubyjax.org
+```
 
-* Database creation
+Make sure your ruby is up to date ([RVM](https://rvm.io/))
 
-* Database initialization
+```sh
+cd /path/to/project
+rvm install ruby-2.3.0-
+```
 
-* How to run the test suite
+Install gems
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+gem install bundler
+bundle install --jobs 4
+```
 
-* Deployment instructions
+Setup your database (Postgresql)
 
-* ...
+Mac - http://postgresapp.com/ to install
+
+```sh
+rails db:create db:migrate db:test:prepare
+```
+If this fails. Go into your `config/database.yml` and remove line #4 (`host: localhost`)
+
+Get viewing
+ 
+```sh
+rails s
+```
+
+## Testing
+
+```sh
+rake
+```
+
+
+
