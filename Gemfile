@@ -9,12 +9,16 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'puma'
+gem 'rake', '< 11.0'
+gem 'haml-rails'
+
 
 group :development, :test do
   gem 'pry-rails'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'fabrication'
 end
 
 group :development do
