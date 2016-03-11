@@ -1,0 +1,4 @@
+%section#events
+  %ul
+    - @events.each do |event|
+      %li= event.truncated_name
