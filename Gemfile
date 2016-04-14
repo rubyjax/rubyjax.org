@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'puma'
 gem 'rake', '< 11.0'
 gem 'haml-rails'
+gem 'faraday'
 
 
 group :development, :test do
