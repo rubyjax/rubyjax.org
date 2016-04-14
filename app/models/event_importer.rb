@@ -1,18 +1,17 @@
 class EventImporter
 
   def import_events
-    url = "http://api.meetup.com/RubyJax/events"
-    response = Faraday.get(url)
+    url           = "http://api.meetup.com/RubyJax/events"
+    response      = Faraday.get(url)
     response_body = response.body
-    require 'pry'; binding.pry;
-    events = JSON.parse(response_body)
-    events.each do |event|
-      Event.create(
-        name: event["name"],
-        event_at: event["time"]
-      )
-    end
+    events        = JSON.parse(response_body)
 
+    events.each do |meetup_event|
+      event          = Event.new
+      event.name     = meetup_event["name"]
+      event.event_at = meetup_event["time"]
+      event.save
+    end
   end
 
 end
