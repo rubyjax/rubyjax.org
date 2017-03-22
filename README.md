@@ -31,7 +31,13 @@ bundle install --jobs 4
 
 Setup your database (Postgresql)
 
-Mac - http://postgresapp.com/ to install
+Mac - `brew install postgres` to install 
+<pre>
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  pg_ctl -D /usr/local/var/postgres start
+</pre>
 
 ```sh
 rails db:create db:migrate db:test:prepare
